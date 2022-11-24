@@ -1,0 +1,53 @@
+/* opensource color from the s9a.page/sea */
+:root { --sea-oil:seashell; --sea-ink:#000 }
+.sea-amber { --sea-oil: salmon }
+.sea-blush { --sea-oil: pink }
+.sea-breeze { --sea-oil: mistyrose }
+.sea-foam { --sea-oil: darkturquoise }
+.sea-fume { --sea-oil: hotpink }
+.sea-gel { --sea-oil: mediumslateblue }
+.sea-glow { --sea-oil: gold }
+.sea-gush { --sea-oil: violet }
+.sea-lava { --sea-oil: rosybrown }
+.sea-sand { --sea-oil: navajowhite }
+.sea-storm { --sea-oil: gainsboro }
+.sea-tide { --sea-oil: deepskyblue }
+@media (prefers-contrast: less) {
+  :root { --sea-ink:#111 }
+  .sea-blush { --sea-oil: lightpink }
+  .sea-breeze { --sea-oil: bisque }
+  .sea-fume { --sea-oil: mediumorchid }
+  .sea-sand { --sea-oil: peachpuff }
+  .sea-storm { --sea-oil: silver }
+  .sea-tide { --sea-oil: dodgerblue }
+}
+@media (prefers-contrast: more) {
+  .sea-amber { --sea-oil: coral }
+  .sea-foam { --sea-oil: turquoise }
+  .sea-gel { --sea-oil: mediumpurple }
+  .sea-glow { --sea-oil: #ee1 }
+  .sea-gush { --sea-oil: plum }
+  .sea-lava { --sea-oil: tan }
+}
+.sea-wet :not(.sea-dry) {
+  background-color: none;
+  color: inherit;
+}
+.sea-wet ::selection {
+  background-color: indigo;
+  color: salmon;
+}
+.sea-blood.sea-blood {
+  background-color: var(--sea-oil);
+  color: var(--sea-ink);
+}
+.sea-bleed.sea-bleed {
+  background-color: var(--sea-ink);
+  color: var(--sea-oil);
+}
+@media (prefers-color-scheme:light) {
+  .sea-bleed.sea-blood {
+    background-color: var(--sea-oil);
+    color: var(--sea-ink);
+  }
+}
